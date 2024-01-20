@@ -3,39 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Hub</title>
     <link rel="stylesheet" href="home.css">
-    <title>NGO Animal Welfare</title>
 </head>
 <body>
-<header>
-    <h1>NGO Animal Welfare</h1>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Animals</a></li>
-            <li><a href="#">Campaigns</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <section class="featured-animals">
-        <h2>Featured Animals</h2>
-        <!-- Display featured animal cards here -->
-    </section>
+<section id="home-section">
+    <h1>Volunteer Hub</h1>
+    <button id="volunteer-button" onclick="scrollToProfiles()">Volunteer Here</button>
+</section>
 
-    <section class="campaigns">
-        <h2>Ongoing Campaigns</h2>
-        <!-- Display ongoing campaign cards here -->
-    </section>
-</main>
+<section id="profiles-section">
+    <!-- Mini Profiles Go Here -->
+    <div class="profile-card" onclick="viewFullProfile('Center1')">
+        <img src="puppies.jpg" alt="Center 1 Image">
+        <h2>Volunteer Center 1</h2>
+        <p>Short description of Center 1.</p>
+    </div>
 
-<footer>
-    <p>&copy; 2024 NGO Animal Welfare. All rights reserved.</p>
-</footer>
+    <div class="profile-card" onclick="viewFullProfile('Center2')">
+        <img src="homeless.jpeg" alt="Center 2 Image">
+        <h2>Volunteer Center 2</h2>
+        <p>Short description of Center 2.</p>
+    </div>
+
+    <div class="profile-card" onclick="viewFullProfile('Center2')">
+        <img src="orphans.jpeg" alt="Center 2 Image">
+        <h2>Volunteer Center 2</h2>
+        <p>Short description of Center 2.</p>
+    </div>
+
+    <!-- Add more mini profiles as needed -->
+</section>
 
 <script src="home.js"></script>
+
 </body>
 </html>
