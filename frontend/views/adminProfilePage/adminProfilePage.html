@@ -1,35 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Place Profile</title>
     <link rel="stylesheet" href="adminProfilePage.css">
 </head>
 <body>
-
-<body>
     <header>
-        <img src="logo.jpeg" alt="Helping Hands Logo" id="organization-logo">
-        <h1 id="profile-title"></h1>
+        <div class="header-content">
+            <div id="logo-container">
+                <img src="../../img/logo.jpeg" alt="Helping Hands Logo" id="organization-logo">
+            </div>
+            <h1 id="profile-title">Helping Hands</h1>
+        </div>
     </header>
 
-<main class="profile-container">
-    <div class="profile-left">
-        <img src="" alt="Volunteer Place Image" id="profile-image">
-        <p id="profile-description"></p>
-    </div>
-
-    <div class="profile-right">
-        <div class="progress-bar-container">
-            <div class="progress-bar" id="progress-bar"></div>
-            <div class="progress-text" id="progress-text"></div>
+    <main class="main-content">
+        <!-- Left column for the story/description -->
+        <div class="profile-left">
+            <img src="../../img/volunteering.jpeg" alt="Volunteer Image" id="profile-image">
+            <h2 id="volunteer-title">Join Our Volunteer Program</h2>
+            <p id="profile-description">.</p>
         </div>
-        <button id="sign-up-button">Sign Up</button>
-    </div>
-</main>
 
-<script src="adminProfilePage.js"></script>
+        <!-- Right column for volunteer sign-up and progress -->
+        <aside class="profile-right">
+            <div class="volunteer-progress-container">
+                <div class="volunteer-progress-bar" style="width: 80%;"></div> <!-- Inline style for demonstration -->
+                <p class="volunteer-progress-text">340 of 500 Volunteers Signed Up</p>
+            </div>
+            <button id="sign-up-button">Sign Up to Volunteer</button>
+            <div class="volunteer-list">
+                <p>Recent Volunteers:</p>
+                <ul>
+                    <li>Edna Katrichak</li>
+                    <li>Charmaine Nathan</li>
+                    <li>Sandie Eby (Popoff)</li>
+                    <!-- More volunteers -->
+                </ul>
+                <a href="#" class="see-all">See all</a>
+            </div>
+        </aside>
+    </main>
 
+    <script src="adminProfilePage.js"></script>
 </body>
 </html>
