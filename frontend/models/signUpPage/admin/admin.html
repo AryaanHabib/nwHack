@@ -35,6 +35,38 @@
 </section>
 
 <script src="admin.js"></script>
+<script>
+    async function submitForm() {
+        const title = document.getElementById('title').value;
+        const category = document.getElementById('category').value;
+        const description = document.getElementById('description').value;
+        const volunteersNeeded = document.getElementById('volunteers-needed').value;
+        const currentVolunteers = document.getElementById('current-volunteers').value;
+
+        const organizationData = {
+            title,
+            category,
+            description,
+            volunteersNeeded: parseInt(volunteersNeeded),
+            currentVolunteers: parseInt(currentVolunteers),
+        };
+
+        try {
+            const fileHandle = await window.showSaveFilePicker();
+            const writable = await fileHandle.createWritable();
+            await writable.write(JSON.stringify(organizationData, null, 2));
+            await writable.close();
+
+            document.getElementById('success-message').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = 'none';
+            }, 5000);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+</script>
 
 </body>
 </html>
+
