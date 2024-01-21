@@ -12,7 +12,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('home.jpeg') center/cover no-repeat; /* Replace with your background image */
+    background: url('../../img/home.jpeg') center/cover no-repeat; /* Replace with your background image */
 }
 
 #home-section h1 {
