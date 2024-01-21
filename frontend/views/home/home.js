@@ -4,5 +4,5 @@ function scrollToProfiles() {
 
 function viewFullProfile(centerName) {
     // Redirect to the full profile page with the specific center's information
-    window.location.href = `../adminProfile/adminProfile.html?center=${encodeURIComponent(centerName)}`;
+    window.location.href = `../adminProfilePage/adminProfilePage.html`;
 }

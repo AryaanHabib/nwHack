@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Sign Up</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<section id="signup-section">
+    <h1>Admin Sign Up</h1>
+    <form id="signup-form" onsubmit="submitForm(event)">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+
+        <label for="volunteers-needed">Number of Volunteers Needed:</label>
+        <input type="number" id="volunteers-needed" name="volunteers-needed" min="0" required>
+
+        <label for="current-volunteers">Current Number of Volunteers:</label>
+        <input type="number" id="current-volunteers" name="current-volunteers" min="0" required>
+
+        <label for="profile-image">Profile Image:</label>
+        <input type="file" id="profile-image" name="profile-image" accept="image/*" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
