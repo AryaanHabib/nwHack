@@ -10,7 +10,7 @@
 
 <section id="signup-section">
     <h1>Admin Sign Up</h1>
-    <form id="signup-form" onsubmit="submitForm(event)">
+    <form id="signup-form">
         <label for="title">Title:</label>
         <input type="text" id="title" name="title" required>
 
@@ -26,15 +26,12 @@
         <label for="current-volunteers">Current Number of Volunteers:</label>
         <input type="number" id="current-volunteers" name="current-volunteers" min="0" required>
 
-        <label for="profile-image">Profile Image:</label>
-        <input type="file" id="profile-image" name="profile-image" accept="image/*" required>
-
-        <button type="submit">Submit</button>
-        <div id="success-message" style="display:none;">
-            Organization data added to JSON file. Message will disappear shortly.
-        </div>
-
+        <button type="button" onclick="submitForm()">Submit</button>
     </form>
+
+    <div id="success-message" style="display:none;">
+        Organization data added to JSON file. Message will disappear shortly.
+    </div>
 </section>
 
 <script src="admin.js"></script>

@@ -1,42 +1,16 @@
 const fs = require('fs');
 
-class JsonWriter {
-    constructor(destination) {
-        this.destination = destination;
-        this.writer = null;
-    }
+function writeToJSONFile(filePath, data) {
+    try {
+        const jsonData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+        jsonData.push(data);
 
-    // Opens the writer
-    open() {
-        this.writer = fs.createWriteStream(this.destination);
-    }
-
-    // Writes JSON representation of organization to file
-    write(organization) {
-        const json = organizationToJson(organization);
-        this.saveToFile(JSON.stringify(json, null, 4));
-    }
-
-    // Closes the writer
-    close() {
-        this.writer.close();
-    }
-
-    // Writes string to file
-    saveToFile(json) {
-        this.writer.write(json);
+        fs.writeFileSync(filePath, JSON.stringify(jsonData, null, 2));
+        return { success: true, message: 'Organization data added to JSON file.' };
+    } catch (error) {
+        console.error(error);
+        return { success: false, message: 'Error adding organization data to JSON file.' };
     }
 }
 
-// Helper function to convert organization details to JSON
-function organizationToJson(organization) {
-    return {
-        organizationName: organization.organizationName,
-        category: organization.category,
-        description: organization.description,
-        numberOfVolunteers: organization.numberOfVolunteers,
-        image: organization.image,
-    };
-}
-
-module.exports = JsonWriter;
+module.exports = { writeToJSONFile };
