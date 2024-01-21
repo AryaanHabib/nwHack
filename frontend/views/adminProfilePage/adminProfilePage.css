@@ -12,12 +12,21 @@ header {
     padding: 10px; /* Increase padding for a prominent header */
     font-size: 1em; /* Increase font size for header text */
     border-radius: 10px;
+    position: relative; /* Add position relative to create a stacking context */
+}
+
+#organization-title {
+    position: absolute;
+    text-align: left;
+    top: 5px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    font-size: 2em; /* Adjust the font size as needed */
 }
 
 .profile-container {
     display: flex;
     justify-content: space-around;
-    margin: 10px;
+    margin-top: 20px;
     background-color: white; /* Set a white background for the profile container */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a card-like appearance */
     border-radius: 10px; /* Add rounded corners to the container */
