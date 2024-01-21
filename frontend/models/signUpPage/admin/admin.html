@@ -9,7 +9,16 @@
 <body>
 
     <!-- Return to Home Button at the top left -->
-    <a href="home.html" class="return-home-button">Return to Home</a>
+    <!-- Return Home button -->
+    <button class="tab-button" onclick="returnHome()">Return Home</button>
+
+    <script>
+        // Function to return to the home page
+        function returnHome() {
+            // Replace the path with the correct path to your home.html file
+            window.location.href = '../../views/home/home.html';
+        }
+    </script>
 
     <section id="signup-section">
         <h1>Organization Sign Up</h1>

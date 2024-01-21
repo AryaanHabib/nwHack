@@ -54,6 +54,8 @@ function viewFullProfile(centerName) {
 }
 
 // Function to open a specific tab
+// Function to open a specific tab
+// Function to open a specific tab
 function openTab(tabName) {
     // Hide all tab content sections
     var tabContents = document.querySelectorAll('.tab-content');
@@ -62,8 +64,27 @@ function openTab(tabName) {
     });
 
     // Show the selected tab content
-    document.getElementById(tabName).style.display = 'block';
+    var selectedTab = document.getElementById(tabName);
+    selectedTab.style.display = 'block';
+
+    // Scroll to the "Our Missions" section if the "Our Mission" tab is selected
+    if (tabName === 'tab1') {
+        scrollToMissions();
+    }
 }
+
+// Function to scroll to the "Our Missions" section
+function scrollToMissions() {
+    var missionsSection = document.getElementById('tab1');
+    missionsSection.scrollIntoView({ behavior: 'smooth' });
+}
+// Function to open the Add Organization page
+// Function to open the Add Organization page
+function openAddOrganizationPage() {
+    // Replace the path with the correct path to your admin.html file
+    window.location.href = '../../models/signUpPage/admin/admin.html';
+}
+
 
 // Open the default tab (you can specify which tab you want to be open initially)
 openTab('tab1');

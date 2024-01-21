@@ -37,7 +37,7 @@ body {
     font-size: 3em;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: rgba(251, 133, 0, 0.9);
+    background-color: rgba(251, 133, 0, 0.6);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
     border-radius: 10px;
 }
@@ -46,7 +46,6 @@ body {
     animation: pulse 1s infinite alternate;
 }
 
-<<<<<<< HEAD
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -54,36 +53,11 @@ body {
     100% {
         transform: scale(1.05);
     }
-=======
-#volunteer-button:hover {
-    background-color: rgb(1, 37, 56); /* Change the background color on hover */
-    transform: scale(1.05); /* Slightly scale up the button on hover */
->>>>>>> f91c2d6852154d8ac7a6a75291465a15d6a4d44d
 }
 
 .tab-content:hover {
     background-color: rgba(255, 255, 255, 0.9);
     transform: scale(1.02);
-}
-
-
-.tab-button {
-    width: 100%;
-    padding: 30px;
-    padding-left: 100px;
-    padding-right: 100px;
-    font-size: 1em;
-    background-color: rgb(26, 127, 152, 0.4);
-    color: white;
-    border: 5px solid rgb(26, 127, 152);;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.tab-button:hover {
-    background-color: rgb(26, 127, 152); /* Change the background color on hover */
-    transform: scale(1.05); /* Slightly scale up the button on hover */
 }
 
 #profiles-section {
@@ -164,4 +138,88 @@ body {
 
 ::-webkit-scrollbar-track {
     background-color: #f7f7f7;
+}
+
+.tab-button {
+    width: 100%;
+    padding: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 1em;
+    background-color: rgb(26, 127, 152, 0.4);
+    color: white;
+    border: 5px solid rgb(26, 127, 152);;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.tab-button:hover {
+    background-color: rgb(26, 127, 152); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+#tab1 {
+    /* Add styles for the "Our Missions" section */
+    text-align: LEFT;
+    padding: 40px;
+    background-color: #ffffff;
+}#tab1 {
+     display: flex;
+     justify-content: space-around;
+     align-items: stretch;
+ }
+
+.mission-card,
+.contact-card {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.mission-content,
+.contact-info {
+    padding: 20px;
+}
+
+.mission-header,
+.contact-header {
+    color: #fff;
+    background-color: #1a7f98;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.mission-description {
+    color: #333;
+}
+
+.mission-goals-header {
+    color: #1a7f98;
+    margin-bottom: 10px;
+}
+
+.mission-goals-list {
+    list-style: none;
+    padding: 20px;
+}
+
+.mission-goals-list > li {
+    margin-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+    opacity: 0.7; /* Initial opacity for items not being hovered */
+}
+
+.mission-goals-list > li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    filter: brightness(0.8);
+    opacity: 1; /* Full opacity for the hovered item */
+}
+
+.contact-detail {
+    color: #333;
+    margin-bottom: 10px;
 }
