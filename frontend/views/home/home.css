@@ -46,6 +46,7 @@ body {
     animation: pulse 1s infinite alternate;
 }
 
+<<<<<<< HEAD
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -53,6 +54,11 @@ body {
     100% {
         transform: scale(1.05);
     }
+=======
+#volunteer-button:hover {
+    background-color: rgb(1, 37, 56); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+>>>>>>> f91c2d6852154d8ac7a6a75291465a15d6a4d44d
 }
 
 .tab-content:hover {

@@ -1,25 +1,52 @@
 body {
     margin: 10px;
-    padding: 10px;
+    padding: 50px;
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    background-color: rgb(248, 248, 248);
+    position: relative; /* Needed to position the pseudo-element */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../../img/background.jpg'); /* Adjust path as necessary */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur level as desired */
+    z-index: -1; /* Ensure the image is behind the content */
+    opacity: 0.5; /* Adjust for translucency as desired */
+}
+
+.main-content, header {
+    position: relative;
+    z-index: 1;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: rgb(251, 133, 0, 0.9);
     color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
+    position: relative; /* Added for positioning the logo absolutely */
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the title */
     align-items: center;
     width: 100%;
+    position: relative; /* Ensure we can position children absolutely */
 }
 
 #logo-container {
+    position: absolute; /* Position the logo absolutely */
+    left: -10px; /* Adjust as necessary */
+    top: 50%;
+    transform: translateY(-50%); /* Center the logo vertically */
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
@@ -27,7 +54,9 @@ header {
 }
 
 #profile-title {
-    margin: auto;
+    z-index: 1;
+    flex-grow: 1;
+    text-align: center;
 }
 
 #organization-logo {
@@ -35,31 +64,30 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
 .main-content {
     display: flex;
     margin-top: 20px;
-    background-color: white;
+    background-color: rgba(248, 243, 243, 0.86);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden; /* Ensure the child elements do not overflow the rounded corners */
-}
-
-.profile-left, .profile-right {
-    padding: 20px;
+    overflow: hidden;
 }
 
 .profile-left {
-    flex: 2; /* Allocate more space for the story/description */
+    flex: 3;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: justify;
 }
 
 #profile-image {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Adjust as needed */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -77,42 +105,71 @@ header {
 
 .profile-right {
     flex: 1;
-    background-color: #f3f3f3;
-    border-radius: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+    margin-left: 20px;
 }
 
 .volunteer-progress-container {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding: 10px;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+.volunteer-progress-container::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Same top position as the green bar */
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: #d3d3d3; /* Grey color for the full length */
+    border-radius: 8px;
+    z-index: 0; /* Ensure it's behind the green bar */
 }
 
 .volunteer-progress-bar {
     height: 20px;
-    background-color: #4CAF50;
+    background-color: rgb(76, 175, 80);
     border-radius: 8px;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 80%; /* Adjust this width to represent the actual progress */
+    z-index: 1; /* Ensure it's above the grey bar */
 }
 
 .volunteer-progress-text {
     text-align: center;
+    margin-top: 60px; /* Adjust margin to move text below the progress bar */
     margin-bottom: 20px;
 }
 
 #sign-up-button {
-    background-color: #4CAF50;
+    background-color: rgb(6, 77, 112, 0.9);
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
+    transition: background-color 0.2s, transform 0.2s;
 }
+
+#sign-up-button:hover {
+    background-color: rgb(3, 48, 69, 0.9); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
 
 .volunteer-list ul {
     list-style: none;
@@ -120,6 +177,7 @@ header {
     margin-top: 0;
     margin-bottom: 20px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .volunteer-list li {
@@ -129,8 +187,35 @@ header {
 
 .see-all {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
-    color: #4CAF50;
+    color: rgb(6, 77, 112, 0.9);
     text-decoration: none;
+    transition: transform 0.2s, text-decoration 0.2s; /* Smooth transition for hover effects */
+}
+
+.see-all:hover {
+    transform: scale(1.05); /* Scale up the element */
+    text-decoration: underline; /* Underline the text */
+    color:rgb(3, 48, 69, 0.9);
+}
+
+.return-home-button {
+    padding: 10px 20px;
+    background-color: rgb(6, 77, 112, 0.9); /* Use your theme color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 300px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adjust as needed */
+    align-self: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.return-home-button:hover {
+    background-color: rgb(3, 48, 69, 0.9); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
 }
