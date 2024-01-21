@@ -16,7 +16,7 @@
         // Function to return to the home page
         function returnHome() {
             // Replace the path with the correct path to your home.html file
-            window.location.href = '../../../../frontend/views/home/home.html';
+            window.location.href = '../../../../frontend/views/home2/home.html';
         }
     </script>
 
@@ -37,7 +37,8 @@
 
         <label for="current-volunteers">Current Number of Volunteers:</label>
         <input type="number" id="current-volunteers" name="current-volunteers" min="0" required>
-
+        <label for ="profile-image">Profile Image</label>
+            <input type = "file" id = "profile-image" name ="profile-image" accept="image/*">
         <button type="button" onclick="submitForm()">Submit</button>
         </form>
 
