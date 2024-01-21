@@ -1,3 +1,5 @@
+// Assuming you have already defined AdminProfile and AdminProfileList classes
+
 function submitForm(event) {
     event.preventDefault();
 
@@ -20,15 +22,25 @@ function submitForm(event) {
         return;
     }
 
-    // Perform further actions with the form data, e.g., send to a server
-    console.log('Form submitted successfully!');
-    console.log('Title:', title);
-    console.log('Category:', category);
-    console.log('Description:', description);
-    console.log('Number of Volunteers Needed:', volunteersNeeded);
-    console.log('Current Number of Volunteers:', currentVolunteers);
-    console.log('Profile Image:', profileImage);
+    try {
+        // Create a new AdminProfile instance
+        const newProfile = new AdminProfile(title, category, description, volunteersNeeded, currentVolunteers, profileImage);
+
+        // Add the new profile to the AdminProfileList
+        adminProfileList.addProfile(newProfile);
+
+        // Perform further actions with the form data, e.g., send to a server
+        console.log('Form submitted successfully!');
+        console.log('New AdminProfile instance:', newProfile);
+    } catch (error) {
+        console.error(error.message);
+        return;
+    }
 
     // Reset the form
     document.getElementById('signup-form').reset();
 }
+
+// Example usage
+const adminProfileList = new AdminProfileList();
+// You can use the adminProfileList instance to store the created profiles.
