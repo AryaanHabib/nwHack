@@ -14,7 +14,7 @@ function openTab(tabName) {
     tabContents.forEach(function(tabContent) {
         tabContent.style.display = 'none';
     });
-
+    
     // Show the selected tab content
     document.getElementById(tabName).style.display = 'block';
 }
