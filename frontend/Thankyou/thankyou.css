@@ -1,0 +1,57 @@
+/* signup-thankyou.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #0c2aef, #f66701);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.thanks-animation {
+    margin-bottom: 20px;
+}
+
+.thanks-animation img {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.return-home-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #211bcc;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.return-home-link:hover {
+    background-color: #e1550a;
+    color: #fff;
+}
