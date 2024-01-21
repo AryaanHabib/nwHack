@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Sample data, replace with actual data
     const profileData = {
-        title: "Paws for a Cause",
-        image: "../../img/puppies.jpg",
-        description: "Welcome to our dog shelter, a haven for furry friends seeking love and care. Our shelter is dedicated to providing a safe and nurturing environment for dogs in need, offering them a second chance for a joyful life. With a compassionate team of caregivers and volunteers, we strive to find loving forever homes for each dog, tailoring our approach to their individual needs. Whether rescuing abandoned, abused, or neglected dogs, our mission is to heal, rehabilitate, and advocate for these loyal companions. Join us in creating a brighter future for these canine companions, where wagging tails and unconditional love abound.",
+        title: "EcoHarmony Guardians",
+        image: "../../img/env.png",
+        description: "EcoHarmony Guardians is a dedicated environmental non-profit organization committed to fostering a harmonious coexistence between humanity and the planet. With an unwavering commitment to preserving biodiversity and mitigating the impacts of climate change, we stand as vigilant guardians of our ecosystems. Through innovative conservation initiatives, sustainable practices, and community engagement, we strive to create a world where nature thrives alongside human development. Our projects range from reforestation efforts to advocating for renewable energy solutions, all geared towards achieving ecological balance. Join us in our mission to safeguard the environment for future generations and ensure a world where the delicate symphony of nature is preserved in perfect harmony.",
         volunteersSigned: 15,
         volunteersNeeded: 20
     };
