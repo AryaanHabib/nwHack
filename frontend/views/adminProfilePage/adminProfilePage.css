@@ -2,7 +2,7 @@ body {
     margin: 10px;
     padding: 50px;
     font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
+    background-color: rgb(248, 248, 248);
     position: relative; /* Needed to position the pseudo-element */
 }
 
@@ -68,7 +68,7 @@ header {
 .main-content {
     display: flex;
     margin-top: 20px;
-    background-color: white;
+    background-color: rgba(248, 243, 243, 0.86);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
@@ -109,7 +109,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: rgb(243, 243, 243);
     border-radius: 10px;
     margin-left: 20px;
 }
