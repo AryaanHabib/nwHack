@@ -1,6 +1,6 @@
 body {
     margin: 10px;
-    padding: 10px;
+    padding: 100px;
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
 }
@@ -8,7 +8,7 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
 }
 
@@ -35,21 +35,19 @@ header {
     height: auto;
     border-radius: 10px;
 }
+
 .main-content {
     display: flex;
     margin-top: 20px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    overflow: hidden; /* Ensure the child elements do not overflow the rounded corners */
-}
-
-.profile-left, .profile-right {
-    padding: 20px;
+    overflow: hidden;
 }
 
 .profile-left {
-    flex: 2; /* Allocate more space for the story/description */
+    flex: 3;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -59,7 +57,7 @@ header {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Adjust as needed */
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
@@ -77,15 +75,18 @@ header {
 
 .profile-right {
     flex: 1;
-    background-color: #f3f3f3;
-    border-radius: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    margin-left: 20px;
 }
 
 .volunteer-progress-container {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     padding: 10px;
 }
 
@@ -110,7 +111,7 @@ header {
     border: none;
     border-radius: 5px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
 }
 
@@ -119,7 +120,8 @@ header {
     padding: 0;
     margin-top: 0;
     margin-bottom: 20px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .volunteer-list li {
@@ -133,4 +135,23 @@ header {
     text-align: center;
     color: #4CAF50;
     text-decoration: none;
+}
+
+.return-home-button {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Use your theme color */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    margin-top: 20px; /* Add space above the button */
+    margin-bottom: 20px; /* Add space below the button */
+    align-self: center; /* Align the button to the center of the column */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.return-home-button:hover {
+    background-color: #367c39; /* Darker shade for hover effect */
 }
