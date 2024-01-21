@@ -13,7 +13,7 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('../../img/adminBackground.jpg'); /* Path to your background image */
+    background-image: url('../../img/'); /* Path to your background image */
     background-size: cover;
     background-position: center;
     filter: blur(8px); /* Adjust the blur level as desired */
