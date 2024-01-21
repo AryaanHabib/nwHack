@@ -15,12 +15,13 @@ header {
     position: relative; /* Add position relative to create a stacking context */
 }
 
-#organization-title {
+#organization-logo {
     position: absolute;
-    text-align: left;
     top: 5px; /* Adjust the top position as needed */
     left: 10px; /* Adjust the left position as needed */
-    font-size: 2em; /* Adjust the font size as needed */
+    width: 100px; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add border radius if needed */
 }
 
 .profile-container {
