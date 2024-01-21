@@ -34,7 +34,6 @@ function organizationToJson(organization) {
         organizationName: organization.organizationName,
         category: organization.category,
         description: organization.description,
-        roleOfVolunteers: organization.roleOfVolunteers,
         numberOfVolunteers: organization.numberOfVolunteers,
         image: organization.image,
     };
