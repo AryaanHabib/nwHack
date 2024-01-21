@@ -51,7 +51,7 @@ body {
 }
 
 #volunteer-button:hover {
-    background-color: #012538; /* Change the background color on hover */
+    background-color: rgb(1, 37, 56); /* Change the background color on hover */
     transform: scale(1.05); /* Slightly scale up the button on hover */
 }
 

@@ -3,10 +3,31 @@ body {
     padding: 50px;
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8;
+    position: relative; /* Needed to position the pseudo-element */
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url('../../img/background.jpg'); /* Adjust path as necessary */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust the blur level as desired */
+    z-index: -1; /* Ensure the image is behind the content */
+    opacity: 0.5; /* Adjust for translucency as desired */
+}
+
+.main-content, header {
+    position: relative;
+    z-index: 1;
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: rgb(251, 133, 0, 0.9);
     color: white;
     padding: 20px;
     border-radius: 10px;
@@ -59,6 +80,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    text-align: justify;
 }
 
 #profile-image {
@@ -96,39 +118,65 @@ header {
     width: 80%;
     margin: 0 auto;
     padding: 10px;
+    position: relative; /* Needed for absolute positioning of the pseudo-element */
+}
+
+.volunteer-progress-container::before {
+    content: '';
+    position: absolute;
+    top: 30px; /* Same top position as the green bar */
+    left: 0;
+    right: 0;
+    height: 20px;
+    background-color: #d3d3d3; /* Grey color for the full length */
+    border-radius: 8px;
+    z-index: 0; /* Ensure it's behind the green bar */
 }
 
 .volunteer-progress-bar {
     height: 20px;
-    background-color: #4CAF50;
+    background-color: rgb(76, 175, 80);
     border-radius: 8px;
-    margin-bottom: 10px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 80%; /* Adjust this width to represent the actual progress */
+    z-index: 1; /* Ensure it's above the grey bar */
 }
 
 .volunteer-progress-text {
     text-align: center;
+    margin-top: 60px; /* Adjust margin to move text below the progress bar */
     margin-bottom: 20px;
 }
 
 #sign-up-button {
-    background-color: #4CAF50;
+    background-color: rgb(6, 77, 112, 0.9);
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
     cursor: pointer;
     border: none;
     border-radius: 5px;
+    margin-top: 10px;
     margin-bottom: 20px;
     width: 80%;
     box-sizing: border-box;
+    transition: background-color 0.2s, transform 0.2s;
 }
+
+#sign-up-button:hover {
+    background-color: rgb(3, 48, 69, 0.9); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
+}
+
 
 .volunteer-list ul {
     list-style: none;
     padding: 0;
     margin-top: 0;
     margin-bottom: 20px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -139,27 +187,35 @@ header {
 
 .see-all {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
     text-align: center;
-    color: #4CAF50;
+    color: rgb(6, 77, 112, 0.9);
     text-decoration: none;
+    transition: transform 0.2s, text-decoration 0.2s; /* Smooth transition for hover effects */
+}
+
+.see-all:hover {
+    transform: scale(1.05); /* Scale up the element */
+    text-decoration: underline; /* Underline the text */
+    color:rgb(3, 48, 69, 0.9);
 }
 
 .return-home-button {
     padding: 10px 20px;
-    background-color: #4CAF50; /* Use your theme color */
+    background-color: rgb(6, 77, 112, 0.9); /* Use your theme color */
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 1em;
     border-radius: 5px;
-    margin-top: 290px; /* Adjust as needed */
+    margin-top: 300px; /* Adjust as needed */
     margin-bottom: 20px; /* Adjust as needed */
     align-self: center;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth background color transition */
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 .return-home-button:hover {
-    background-color: #367c39; /* Darker shade for hover effect */
+    background-color: rgb(3, 48, 69, 0.9); /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up the button on hover */
 }
