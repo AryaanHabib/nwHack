@@ -13,7 +13,7 @@ body::before {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url('../../img/'); /* Path to your background image */
+    background-image: url('../../img/adminBackground.jpg'); /* Path to your background image */
     background-size: cover;
     background-position: center;
     filter: blur(8px); /* Adjust the blur level as desired */
@@ -72,8 +72,7 @@ button:hover {
 .return-home-button {
     display: inline-block;
     padding: 10px 20px;
-    margin-left: 30px;
-    margin-top: 20px;
+    margin-left: 50px;
     background-color: rgb(6, 77, 112, 0.9);
     color: white;
     text-align: center;
