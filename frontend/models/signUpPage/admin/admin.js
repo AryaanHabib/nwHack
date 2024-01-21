@@ -1,3 +1,9 @@
+// Import the JsonWriter module
+const JsonWriter = require('../../../backend/src/Persistence/jsonWriter');
+
+// Create an instance of JsonWriter with the correct destination JSON file path
+const jsonWriter = new JsonWriter('../../../backend/data/json/organisation.json');
+
 function submitForm(event) {
     event.preventDefault();
 
@@ -20,14 +26,29 @@ function submitForm(event) {
         return;
     }
 
-    // Perform further actions with the form data, e.g., send to a server
-    console.log('Form submitted successfully!');
-    console.log('Title:', title);
-    console.log('Category:', category);
-    console.log('Description:', description);
-    console.log('Number of Volunteers Needed:', volunteersNeeded);
-    console.log('Current Number of Volunteers:', currentVolunteers);
-    console.log('Profile Image:', profileImage);
+    // Create an organization object
+    const organization = {
+        organizationName: title,
+        category: category,
+        description: description,
+        roleOfVolunteers: 'Specify Role Here', // Add a default role or customize based on your needs
+        numberOfVolunteers: volunteersNeeded,
+        image: profileImage, // Assuming 'image' is a base64-encoded image string
+    };
+
+    // Write the organization data to the JSON file
+    jsonWriter.open();
+    jsonWriter.write(organization);
+    jsonWriter.close();
+
+    // Display success message
+    const successMessage = document.getElementById('success-message');
+    successMessage.style.display = 'block';
+
+    // Hide the success message after 3 seconds
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 3000);
 
     // Reset the form
     document.getElementById('signup-form').reset();
