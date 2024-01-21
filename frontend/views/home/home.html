@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Hub</title>
+    <title>Helping Hands</title>
     <link rel="stylesheet" href="home.css">
 </head>
 <body>
 
 <section id="home-section">
-    <h1>Volunteer Hub</h1>
+    <div class="button-container">
+            <button class="tab-button" onclick="openTab('tab1')">Our Mission</button>
+            <button class="tab-button" onclick="openTab('tab2')">Organizations</button>
+            <button class="tab-button" onclick="openTab('tab3')">Contact Us</button>
+        </div>
+    <h1>Helping Hands</h1>
     <button id="volunteer-button" onclick="scrollToProfiles()">Volunteer Here</button>
+</section>
+
+<section id="tab1" class="tab-content">
+</section>
+
+<section id="tab2" class="tab-content">
+    <!-- Content for Tab 2 -->
+</section>
+
+<section id="tab3" class="tab-content">
+    <!-- Content for Tab 3 -->
 </section>
 
 <section id="profiles-section">
     <!-- Mini Profiles Go Here -->
     <div class="profile-card" onclick="viewFullProfile('Center1')">
         <img src="../../img/puppies.jpg" alt="Center 1 Image">
-        <h2>Volunteer Center 1</h2>
-        <p>Short description of Center 1.</p>
+        <h2>Paws for a Cause</h2>
+        <p>Welcome to Paws for a Cause, our dedicated volunteer organization for a brighter future for our four-legged friends.</p>
     </div>
 
     <div class="profile-card" onclick="viewFullProfile('Center2')">
         <img src="../../img/homeless.jpeg" alt="Center 2 Image">
-        <h2>Volunteer Center 2</h2>
-        <p>Short description of Center 2.</p>
+        <h2>Hopeful Hands</h2>
+        <p>Join us in making a difference in the lives of those in need.</p>
     </div>
 
     <div class="profile-card" onclick="viewFullProfile('Center2')">
         <img src="../../img/orphans.jpeg" alt="Center 2 Image">
-        <h2>Volunteer Center 2</h2>
-        <p>Short description of Center 2.</p>
+        <h2>Tender Hearts</h2>
+        <p>At Tender Hearts, we're on a mission to create a loving and nurturing environment for children in orphanages.</p>
     </div>
 
     <!-- Add more mini profiles as needed -->
@@ -40,3 +56,5 @@
 
 </body>
 </html>
+
+
